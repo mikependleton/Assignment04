@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+<div class="container">
+
+    <Head>
+        <title>Home page</title>
+        <h2>Mike Pendleton's home page</h2>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </Head>
+
+
+    <article>
+        <h2>This blog is to focus on Windows MSIEXEC errors</h2>
+
+        <div class="row">
+            <details>
+                <summary>Install failures</summary>
+                <article class=col>Generic Windows installer errors are difficult to troubleshoot to those that are
+                    not
+                    reviewing logs
+                    daily.
+                </article>
+                <article class="col">Investigate and repeats of install errors will make a technician more proficient
+                    to
+                    determine
+                    the issues
+                </article>
+            </details>
+
+
+            </p>
+        </div>
+        <aside>
+            <h4>Mike Pendleton's Background</h4>
+            <p>I have been in I.T. for about 18 years,
+                where I have provided support for network and system administration.
+                Currently my role has been more information
+                security focused over the past 5 years..</p>
+            <p> 1603 errors are the most challenging errors as they are Generic,
+                however; there are several errors that can be introduced from MSIEXEC </p>
+        </aside>
+
+
+    </article>
+    <figure>
+        {% load static %}
+        <img src="{% static 'Images/1603.png' %}" alt="My image" width="800" height="400">>
+        <figcaption>https://www.kunal-chowdhury.com/2018/08/exit-code-1603-fatal-error.html.</figcaption>
+
+    </figure>
+    <blockquote cite="https://www.kunal-chowdhury.com/2018/08/exit-code-1603-fatal-error.html">
+        Sited from above ^^^
+    </blockquote>
+
+
+    <footer>
+        <p>Blog Author: Mike Pendleton</p>
+        <p><a href="mailto:michaelpendleton80@yahoo.com">Mike Pendleton</a></p>
+        <div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+                crossorigin="anonymous"></script>
+        </div>
+    </footer>
+
+</div>
+
+
+
+
+</html>
+
+{% endblock content %}

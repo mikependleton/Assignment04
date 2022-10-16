@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<html>
+
+<head>
+    <title>post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+
+<div class="container">
+    <div class="row">
+        <h1 class="col">1603 Post</h1>
+
+
+        <article>
+            <h2 class="col">1603 MSIEXEC error troubleshooting</h2>
+    </div>
+    <p>How to get to the bottom of windows installer 1603?</p>
+
+    <p>My advice is to install Notepad ++. This is because Notepad or Mac's default text editors are:</p>
+    <figure>
+        </article>
+
+        <img src="{% static 'Images/trash.jpg' %}" style="float:bottom" alt="My image" width="100" height="100">>
+        <figcaption>
+            Image sited from:
+            https://www.google.com/search?client=firefox-b-1-d&q=Trash+image&tbm=isch&chips=q:trash+image,g_1:mac:ZOlPkFM5Jas%3D&usg=AI4_-kSM7VsDgABnJiuy8kn2jcTmefBORQ&sa=X&ved=2ahUKEwiXtvPJj5P6AhXgmmoFHVx0AxUQgIoDKAN6BAgCEBU&biw=1920&bih=919&dpr=1#imgrc=nzlfb9-bx53ZUM.
+        </figcaption>
+
+    </figure>
+
+    <ol>
+        <li>Open the installer log</li>
+        <li>Ctrl + End for windows or Cmd + end for Mac</li>
+        <li>Note the exit code</li>
+        <li>If 1603 in this example, then ctrl + f and type "value 3" </li>
+        <p>Reference for value types:https://docs.microsoft.com/en-us/windows/win32/msi/logging-of-action-return-values
+        </p>
+        <li>Once you search then click on the top hit</li>
+        <li>Scroll up about 5-10 lines and then you will see the reason for the failure</li>
+        <p>
+            <mark>This is data from Work, so I did need to scrub our data for security reasons.</mark>
+            {% load static %}
+            <img src="{% static 'Images/1603_error.jpg' %}" style="float:bottom" alt="My image" width="1500"
+                height="300">
+        </p>
+        <li>This particular instance there is a permissions issue and the systems team would need to investigate
+            GPO/permissions.</li>
+
+    </ol>
+
+    <footer>
+        <p>Blog Author: Mike Pendleton</p>
+        <p><a href="mailto:michaelpendleton80@yahoo.com">Mike Pendleton</a></p>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+    </footer>
+</div>
+
+</html>
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+<html>
+
+<head>
+    <title>posts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+
+
+    </div>
+    {% for post in post_list %}
+    <div class="card">
+        <div class="card-header">
+
+            <a href="{{ post.title }}">{{ post.title }} |</a>
+            <span class="text-muted">by {{ post.author }} |
+
+        </div>
+        <div class="card-body">
+            <!-- Changes start here! -->
+            <p>{{ post.body }}</p>
+
+        </div>
+        <div class="card-footer">
+        </div>
+
+
+
+        <head>
+            <title>posts done</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+                crossorigin="anonymous">
+        </head>
+
+
+
+
+        {% endfor %}
+    </div>
+
+
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <div class="container">
+        <figure>
+            {% load static %}
+            <img src="{% static 'Images/blogpostimageguide.jpg' %}" alt=" creat the post" width="800" height="400">>
+            <figcaption>referenced from https://neilpatel.com/blog/blog-post-image-guide/.</figcaption>
+        </figure>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+    </div>
+</div>
+
+</html>
+
+{% endblock content %}

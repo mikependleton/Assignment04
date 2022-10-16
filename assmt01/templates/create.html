@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<html>
+
+<head>
+    <title>Create post</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+</head>
+<div class="container">
+    <h1>Create Blog Posts</h1>
+
+    <div class="form-control">
+        <form action="" method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save">
+        </form>
+    </div>
+
+    <p>Click Sumbit to Add the Post.</p>
+
+
+    <figure>
+        {% load static %}
+        <img src="{% static 'Images/create.jpg' %}" alt="My image" width="800" height="400">>
+        <figcaption>referenced from
+            https://theartofeducation.edu/2020/09/09/what-to-do-when-youve-only-got-a-pencil-and-paper/.</figcaption>
+    </figure>
+
+    <footer>
+        <p>Blog Author: Mike Pendleton</p>
+        <p><a href="mailto:michaelpendleton80@yahoo.com">Mike Pendleton</a></p>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+            crossorigin="anonymous"></script>
+    </footer>
+</div>
+
+</html>
+{% endblock content %}
